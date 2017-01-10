@@ -1,0 +1,19 @@
+{
+  "name": "eastern-rhinos-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Piderman/eastern-rhinos-stats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Piderman/eastern-rhinos-stats/issues"
+  },
+  "homepage": "https://github.com/Piderman/eastern-rhinos-stats"
+}
