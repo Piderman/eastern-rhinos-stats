@@ -4,10 +4,11 @@
  * @param {Boolean} isBowling TBD
  *
  * @return {obj}  delivery
- *         {Boolean}  isPowerPlay   was ball jackpot or in a PP
- *         {int}      runs          any score inc extras and (negative) wickets.
- *                                  null for off-strike
- *         {int}      bonusRuns     TBD
+ *   {Boolean}    isContributeToDismissal TBD
+ *   {Boolean}    isPowerPlay             was ball jackpot or in a PP
+ *   {int}        bonusRuns               TBD
+ *   {int}        runs                    any score inc extras and (negative)
+ *                                        wickets. null for off-strike
  */
 exports.deliveryModel = function(data, isBowling) {
   'use strict';
