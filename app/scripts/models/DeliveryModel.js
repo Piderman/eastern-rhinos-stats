@@ -40,6 +40,7 @@ exports.deliveryModel = function(data, isBowling) {
 
     case 'b':
     case 'c':
+    case 'mk':
     case 'ro':
     case 'st':
       scored = -5;

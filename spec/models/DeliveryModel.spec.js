@@ -1,6 +1,6 @@
 var delivery = require('../../app/scripts/models/Deliverymodel');
 
-describe("A deliver", function() {
+describe("A delivery", function() {
   it('should be a thing', function() {
     var standard = delivery.deliveryModel('7');
     var bonus = delivery.deliveryModel('5*');
@@ -35,6 +35,7 @@ describe("A deliver", function() {
     var caught = delivery.deliveryModel('c*');
     var runOut = delivery.deliveryModel('ro');
     var stumped = delivery.deliveryModel('st');
+    var mankad = delivery.deliveryModel('mk');
 
     expect(bowled.classification).toBe('wicket');
     expect(bowled.runs).toBe(-5);
@@ -48,6 +49,9 @@ describe("A deliver", function() {
 
     expect(stumped.classification).toBe('wicket');
     expect(stumped.runs).toBe(-5);
+
+    expect(mankad.classification).toBe('wicket');
+    expect(mankad.runs).toBe(-5);
   });
 
   it('should support an off-strike batsmen', function() {
