@@ -78,5 +78,12 @@ describe("A delivery", function() {
     expect(dot.runs).toBe(0);
   });
 
-  // support mixed types, eg front foot no ball + runs scored
+  // mixed types
+  it('should support runs scored from extras', function() {
+    var extraWithRuns = delivery.deliveryModel('nb+1');
+
+    // two for the extra + 1
+    expect(extraWithRuns.classification).toBe('extra');
+    expect(extraWithRuns.runs).toBe(3);
+  });
 });

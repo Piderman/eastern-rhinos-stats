@@ -14,10 +14,13 @@ exports.deliveryModel = function(data, isBowling) {
   'use strict';
 
   var powerPlayPattern  = /\*$/;
-  var ball = data.toLowerCase().replace(powerPlayPattern, '');
+  // strip input to get only the 'type' so we can use the switch below to build
+  var ball = data.toLowerCase().replace(powerPlayPattern, '').replace(/\+\d/, '');
+  var inputScore = data.match(/\d/);
 
-  // how many runs were made. Extras count as 2
-  var scored = null;
+  // capture any digits in the data (as ball removed them) to add to player score
+  // changes such as sundries or -ve for wickets are handled in the respective case
+  var scored = inputScore && parseInt(inputScore[0], 10);
 
   // obj to be built and returned
   var delivery = {
@@ -35,7 +38,7 @@ exports.deliveryModel = function(data, isBowling) {
     case 'nb':
     case 'wd':
       delivery.classification = 'extra';
-      scored = 2;
+      scored += 2;
       break;
 
     case 'b':
